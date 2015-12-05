@@ -14,11 +14,6 @@ $zip = new ZipArchive();
 $zip_url = $uploads.'/test6.zip';
 $res = $zip->open($zip_url , ZipArchive::CREATE);
 
-$file_ok = $dir."/wordpress/wp-config.php";
-$file_broken = "/srv/www/manga-fan.net/lusi/wordpress/wp-settings.php";
-
-$zip->addFile($file_ok);
-$zip->addFile($file_broken);
 $packed_files = 0;
 
 foreach ($iterator as $file) 
